@@ -199,6 +199,11 @@
                     <artifactId>db2jcc</artifactId>
                     <scope>test</scope>
                 </dependency>
+                <dependency>
+                    <groupId>com.ibm.informix</groupId>
+                    <artifactId>ifxjdbc</artifactId>
+                    <scope>test</scope>
+                </dependency>                
             </dependencies>
         </profile>
     </profiles>

@@ -177,6 +177,12 @@
                 <optional>true</optional>
             </dependency>
             <dependency>
+                <groupId>com.ibm.informix</groupId>
+                <artifactId>ifxjdbc</artifactId>
+                <version>3.70.JC5</version>
+                <optional>true</optional>
+            </dependency>            
+            <dependency>
                 <groupId>postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>9.0-801.jdbc3</version>

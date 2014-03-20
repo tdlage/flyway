@@ -20,6 +20,7 @@ import org.flywaydb.core.dbsupport.db2.DB2DbSupport;
 import org.flywaydb.core.dbsupport.derby.DerbyDbSupport;
 import org.flywaydb.core.dbsupport.h2.H2DbSupport;
 import org.flywaydb.core.dbsupport.hsql.HsqlDbSupport;
+import org.flywaydb.core.dbsupport.informix.InformixDbSupport;
 import org.flywaydb.core.dbsupport.mysql.MySQLDbSupport;
 import org.flywaydb.core.dbsupport.oracle.OracleDbSupport;
 import org.flywaydb.core.dbsupport.postgresql.PostgreSQLDbSupport;
@@ -90,7 +91,9 @@ public class DbSupportFactory {
             //   ex.: DB2/NT
             return new DB2DbSupport(connection);
         }
-
+        if (databaseProductName.startsWith("Informix")) {
+            return new InformixDbSupport(connection);
+        }
         throw new FlywayException("Unsupported Database: " + databaseProductName);
     }
 
